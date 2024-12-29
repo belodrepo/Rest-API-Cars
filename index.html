@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Cars Database - REST Demo</title>
+</head>
+
+<body>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <h3 class="mt-5">REST API Cars</h3>
+                <cite>Mottó: "A REST kétszer fárad..."</cite>
+                <p><span id="error" class="text-danger"></span></p>
+                <form action="" class="form border p-2 mb-3 bg-light" id="carForm">
+                    <div class="form-group my-2">
+                        <label for="factory" class="form-label">Gyártó</label>
+                        <input type="text" class="form-control" id="factory" placeholder="Add meg a gyártó nevét.." required>
+                    </div>
+                    <div class="form-group my-2">
+                        <label for="model" class="form-label">Modell</label>
+                        <input type="text" class="form-control" id="model" placeholder="Add meg a modellszámot.." required>
+                    </div>
+                    <div class="form-group my-2">
+                        <label for="year" class="form-label">Évjárat</label>
+                        <input type="number" class="form-control" id="year" placeholder="Add meg az évjáratot.." required>
+                    </div>
+                    <div class="form-group my-2">
+                        <label for="owner" class="form-label">Tulajdonos</label>
+                        <input type="text" class="form-control" id="owner" placeholder="Add meg a tulajdonost.." required>
+                    </div>
+                    <div class="form-group my-2">
+                        <label for="license" class="form-label">Rendszám</label>
+                        <input type="text" class="form-control" id="license" placeholder="Add meg a rendszámot.." required>
+                    </div>
+                    <p>
+                        <button class="btn btn-primary my-2">Elküldöm</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <table class="table table-bordered table-striped table-sm table-hover">
+                    <thead class="table-dark">
+                        <th>#</th>
+                        <th>Gyártó</th>
+                        <th>Modell</th>
+                        <th>Évjárat</th>
+                        <th>Tulajdonos</th>
+                        <th>Rendszám</th>
+                        <th>Műveletek</th>
+                    </thead>
+                    <tbody id="carTable">
+                        <!--Ide generáljuk a táblázat sorait.-->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+
+</html>
