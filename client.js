@@ -34,7 +34,7 @@ async function loadCars() {
     }
 }
 
-//Új autó felvitele az adatbázisba
+//Új gépkocsi felvitele az adatbázisba
 document.getElementById('carForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
